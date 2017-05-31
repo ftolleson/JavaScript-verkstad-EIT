@@ -1,0 +1,12 @@
+Uppgifter
+==========
+
+1.- Sätt en script i din sida med en välkomm meddelande.
+
+2.- gör en sida med två text-fields. 
+    I båda textfältar måste finnas någon initial värde. 
+    - "ett" i den första textfält
+    - "två" i den andra textfält
+
+3.- Med JavaScriopt ska du definera en array med flera olika namn av städer, till exempel ["Göteborg", "Barcelona", "Berlin", "Málaga", "Rom"]
+    Gå igenom arrayen och gör en meddelande med varje stad.

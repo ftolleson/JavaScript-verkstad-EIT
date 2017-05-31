@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+  * Del 1 av 3
+
+  * Vi börjar kursen om JavaScript med att använda den i rätt ställe i koden och 
+  * gå igenom olika lösningar: inline, extern, events
+  * Exempel visar:
+  *   - Användning av HTML5
+  *   - Kodning med JS för webben
+  *
+  * @author Felix Tolleson <felix.tolleson@stromstad.se>
+  
+  * @copyright 2017 Felix Tolleson
+  * Strömstad Gymnasium 2017 - Teknikprogrammet
+  *
+ -->
+<html lang="sv">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Inisialisera</title>
+</head>
+
+<body>
+   <h1>load vs DOMContentLoaded</h1>
+   <p id="stycke1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit tenetur voluptatem accusamus ipsa quis recusandae ullam assumenda culpa saepe hic? Maiores soluta ea quisquam nisi saepe voluptate maxime illo nesciunt.</p>
+   <p>Fugiat officiis ipsa repudiandae aliquam harum, placeat mollitia autem aliquid, architecto ut sapiente, asperiores nobis dignissimos iste omnis inventore. Ipsa suscipit a adipisci ab, accusamus laborum consequatur esse voluptas vel?</p>
+   <p>Molestias voluptatem esse, sunt, hic quod autem dolore iure itaque accusamus facere, placeat fugiat. In sapiente veniam enim assumenda dolorum suscipit qui ut accusantium repellendus ea, neque nam, nemo officia!</p>
+   
+   <input name="Class" type="button" onclick=
+          "change(document.getElementById(box_one));
+           changeBoxesByClass(document.getElementsByClassName('boxes'))"
+           value="Click for a Class" />
+   
+   <input name="Class" type="button" onclick=
+         "changeBoxesByTag(document.getElementsByTagName('p'))"
+          value="Click for a Tag" />
+   
+   <input name="Class" type="button" onclick="reset()" value="Reset" />
+   
+   <div id="box_one">Box 1 class box_one</div>
+   <div class="boxes">Box 2 - class boxes</div>
+   <div class="boxes">Box 3 - class boxes</div>
+   <p>År:
+      <input type="text" id="year">
+   </p>
+   <script>
+      function change() {
+         document.getElementById('box_one').style.backgroundColor = "blue";
+      }
+
+      function changeBoxesByClass() {
+         var boxes = document.getElementsByClassName('boxes')
+            , i = boxes.length;
+         while (i--) {
+            boxes[i].style.backgroundColor = "yellow";
+         }
+      }
+
+      function changeBoxesByTag() {
+         var stycke = document.getElementsByTagName('p')
+            , i = stycke.length;
+         while (i--) {
+            stycke[i].style.backgroundColor = "orange";
+         }
+      }
+      
+      function reset() {
+         document.getElementById('box_one').style.backgroundColor = "white";
+         var boxes = document.getElementsByClassName('boxes')
+            , i = boxes.length;
+         while (i--) {
+            boxes[i].style.backgroundColor = "white";
+         }
+         var stycke = document.getElementsByTagName('p')
+            , i = stycke.length;
+         while (i--) {
+            stycke[i].style.backgroundColor = "white";
+         } 
+      }
+
+      function inisialisera() {
+         document.getElementById('stycke1').style.color = 'red';
+      }
+
+      function inisialiseraAr() {
+         var actYear = new Date().getFullYear();
+         document.getElementById('year').value = actYear;
+      }
+      window.addEventListener('load', inisialisera);
+      document.addEventListener('DOMContentLoaded', inisialiseraAr);
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<!--
+  * Del 1 av X
+
+  * Vi börjar kursen om JavaScript med att använda den i rätt ställe i koden och 
+  * gå igenom olika lösningar: inline, extern, events
+  * Exempel visar:
+  *   - Användning av HTML5
+  *   - Kodning med JS för webben
+  *
+  * @author Felix Tolleson <felix.tolleson@stromstad.se>
+  
+  * @copyright 2017 Felix Tolleson
+  * Strömstad Gymnasium 2017 - Teknikprogrammet
+  *
+ -->
