@@ -1,6 +1,6 @@
-<!--
-  * Del 1 av X
+<!DOCTYPE html>
 
+<!--
   * Vi börjar kursen om JavaScript med att använda den i rätt ställe i koden och 
   * gå igenom olika lösningar: inline, extern, events
   * Exempel visar:
@@ -13,3 +13,16 @@
   * Strömstad Gymnasium 2017 - Teknikprogrammet
   *
  -->
+
+<html lang="sv">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Lektion beskrivning här</title>
+ </head>
+
+ <body>
+ 
+ </body>
+</html>
